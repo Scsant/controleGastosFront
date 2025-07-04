@@ -1,0 +1,151 @@
+/* Exportar Dados - Tema Escuro */
+.exportar-dados {
+  background: linear-gradient(135deg, #2a2a2a 0%, #1e1e1e 100%);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border: 1px solid #3a3a3a;
+}
+
+.exportar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.exportar-header h4 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.periodo-exportar {
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.exportar-botoes {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn-exportar {
+  background: linear-gradient(135deg, #374151 0%, #1f2937 100%);
+  color: white;
+  border: 1px solid #4b5563;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 110px;
+  justify-content: center;
+}
+
+.btn-exportar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.btn-exportar.csv {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border-color: #10b981;
+}
+
+.btn-exportar.csv:hover {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.btn-exportar.relatorio {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  border-color: #3b82f6;
+}
+
+.btn-exportar.relatorio:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.btn-exportar.imprimir {
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  border-color: #8b5cf6;
+}
+
+.btn-exportar.imprimir:hover {
+  background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}
+
+.sem-dados {
+  text-align: center;
+  padding: 20px;
+  color: #9ca3af;
+  font-style: italic;
+}
+
+.sem-dados p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .exportar-dados {
+    padding: 15px;
+  }
+  
+  .exportar-header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  
+  .exportar-botoes {
+    justify-content: center;
+  }
+  
+  .btn-exportar {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+    min-width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .exportar-dados {
+    padding: 12px;
+  }
+  
+  .exportar-header h4 {
+    font-size: 1rem;
+  }
+  
+  .periodo-exportar {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+  
+  .exportar-botoes {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .btn-exportar {
+    width: 100%;
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,148 @@
+/* Filtros de Usuários - Tema Escuro */
+.filtro-usuarios {
+  background: linear-gradient(135deg, #2a2a2a 0%, #1e1e1e 100%);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid #3a3a3a;
+}
+
+.filtro-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.filtro-header h4 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.btn-limpar-usuario {
+  background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.btn-limpar-usuario:hover {
+  background: linear-gradient(135deg, #4b5563 0%, #374151 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(107, 114, 128, 0.3);
+}
+
+.filtro-controles {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.select-usuario {
+  background: #2a2a2a;
+  color: #ffffff;
+  border: 1px solid #444444;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+  min-width: 200px;
+}
+
+.select-usuario:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.select-usuario:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.select-usuario option {
+  background: #2a2a2a;
+  color: #ffffff;
+  padding: 8px;
+}
+
+.loading-usuarios {
+  color: #9ca3af;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.usuario-selecionado {
+  margin-top: 15px;
+  padding: 12px;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  border-radius: 6px;
+  color: white;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid #60a5fa;
+}
+
+.usuario-selecionado strong {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .filtro-usuarios {
+    padding: 15px;
+  }
+  
+  .filtro-header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  
+  .filtro-controles {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .select-usuario {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+@media (max-width: 480px) {
+  .filtro-usuarios {
+    padding: 12px;
+  }
+  
+  .filtro-header h4 {
+    font-size: 0.95rem;
+  }
+  
+  .btn-limpar-usuario {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+  
+  .select-usuario {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+  
+  .usuario-selecionado {
+    padding: 10px;
+    font-size: 0.85rem;
+  }
+}

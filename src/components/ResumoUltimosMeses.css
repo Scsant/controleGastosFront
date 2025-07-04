@@ -1,0 +1,292 @@
+/* Resumo Últimos Meses - Tema Escuro */
+.resumo-ultimos-meses {
+  background: linear-gradient(135deg, #2a2a2a 0%, #1e1e1e 100%);
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid #3a3a3a;
+}
+
+.resumo-header {
+  margin-bottom: 25px;
+}
+
+.resumo-header h3 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.meses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.mes-card {
+  background: #1a1a1a;
+  border-radius: 10px;
+  padding: 15px;
+  border: 1px solid #333333;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 180px;
+}
+
+.mes-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  border-color: #444444;
+}
+
+.mes-nome {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.mes-barras {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 15px;
+  min-height: 80px;
+}
+
+.barra-container {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  height: 80px;
+  width: 60px;
+}
+
+.barra {
+  width: 20px;
+  border-radius: 3px 3px 0 0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.barra.receitas {
+  background: linear-gradient(to top, #10b981 0%, #34d399 100%);
+}
+
+.barra.gastos {
+  background: linear-gradient(to top, #ef4444 0%, #f87171 100%);
+}
+
+.barra:hover {
+  transform: scaleY(1.05);
+  filter: brightness(1.1);
+}
+
+.mes-valores {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.mes-receitas,
+.mes-gastos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.mes-receitas {
+  color: #10b981;
+}
+
+.mes-gastos {
+  color: #ef4444;
+}
+
+.valor-label {
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.valor-numero {
+  font-weight: 600;
+}
+
+.mes-saldo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.mes-saldo.positivo {
+  background: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.mes-saldo.negativo {
+  background: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.saldo-icon {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.saldo-valor {
+  font-size: 0.8rem;
+}
+
+.resumo-legenda {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 15px;
+  background: #1a1a1a;
+  border-radius: 8px;
+  border: 1px solid #333333;
+}
+
+.legenda-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #cccccc;
+  font-size: 0.9rem;
+}
+
+.legenda-cor {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+.legenda-cor.receitas {
+  background: #10b981;
+}
+
+.legenda-cor.gastos {
+  background: #ef4444;
+}
+
+.legenda-cor.saldo {
+  background: linear-gradient(45deg, #10b981 0%, #ef4444 100%);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .resumo-ultimos-meses {
+    padding: 20px;
+  }
+  
+  .meses-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+  }
+  
+  .mes-card {
+    padding: 12px;
+    min-height: 160px;
+  }
+  
+  .mes-nome {
+    font-size: 0.85rem;
+  }
+  
+  .mes-barras {
+    min-height: 70px;
+  }
+  
+  .barra-container {
+    height: 70px;
+    width: 50px;
+  }
+  
+  .barra {
+    width: 18px;
+  }
+  
+  .resumo-legenda {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .resumo-ultimos-meses {
+    padding: 15px;
+  }
+  
+  .resumo-header h3 {
+    font-size: 1.1rem;
+  }
+  
+  .meses-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+  }
+  
+  .mes-card {
+    padding: 10px;
+    min-height: 140px;
+  }
+  
+  .mes-nome {
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .mes-barras {
+    min-height: 60px;
+  }
+  
+  .barra-container {
+    height: 60px;
+    width: 40px;
+  }
+  
+  .barra {
+    width: 15px;
+  }
+  
+  .mes-valores {
+    gap: 5px;
+  }
+  
+  .mes-receitas,
+  .mes-gastos {
+    font-size: 0.75rem;
+  }
+  
+  .mes-saldo {
+    font-size: 0.75rem;
+    padding: 3px 6px;
+  }
+  
+  .resumo-legenda {
+    padding: 12px;
+  }
+  
+  .legenda-item {
+    font-size: 0.85rem;
+  }
+}

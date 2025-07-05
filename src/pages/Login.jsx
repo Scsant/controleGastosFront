@@ -17,8 +17,8 @@ export default function Login() {
 
   return (
     <div className="login-page-wrapper">
-      <img className="decorative-ellipse ellipse-2" src="/images/familia3.jpeg" alt="decorativa 1" />
-      <img className="decorative-ellipse ellipse-3" src="/images/familia.jpeg" alt="decorativa 2" />
+      <img className="decorative-ellipse ellipse-2" src="/familia3.jpeg" alt="decorativa 1" />
+      <img className="decorative-ellipse ellipse-3" src="/familia.jpeg" alt="decorativa 2" />
 
       <div className="login-card-container">
         <div className="login-card">
